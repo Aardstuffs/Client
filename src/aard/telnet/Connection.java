@@ -33,10 +33,11 @@ public class Connection implements Runnable {
         try {
             int b = input.read();
             if (b == -1) throw new Exception("End of stream");
-            return b;
+            else return b;
         } catch (Exception e) {
             e.printStackTrace();
             conn.print("Connection lost");
+            conn.disconnect();
             return 0;
         }
     }

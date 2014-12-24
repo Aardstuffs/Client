@@ -8,8 +8,13 @@ public class Codes {
     public static final char STATUS = (char) 5;
     public static final char TIMING_MARK = (char) 6;
     public static final char TERMINAL_TYPE = (char) 24;
+    public static final char MSDP = (char) 69;
+    @Deprecated
+    public static final char MCCP1 = (char) 85;
+    public static final char MCCP2 = (char) 86;
     
     // TELOPT
+    public static final char IS = (char) 0;
     public static final char SEND = (char) 1;
     
     // Commands following IAC character

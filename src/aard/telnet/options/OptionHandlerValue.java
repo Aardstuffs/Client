@@ -60,5 +60,15 @@ public class OptionHandlerValue extends OptionHandler {
         }
         this.setValue(v.toString(), false);
     }
+
+    @Override
+    public boolean remoteResponse(boolean enable) {
+        return true;
+    }
+
+    @Override
+    public boolean localResponse(boolean enable) {
+        return true;
+    }
     
 }

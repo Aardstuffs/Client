@@ -9,12 +9,22 @@ public class OptionHandlerSimple extends OptionHandler {
     }
 
     @Override
-    public void remoteSet(boolean flag) {
-        this.setValue(flag ? "1" : "0", true);
+    public void remoteSet(boolean enable) {
+        this.setValue(enable ? "1" : "0", true);
     }
 
     @Override
-    public void localSet(boolean flag) {
-        this.setValue(flag ? "1" : "0", false);
+    public void localSet(boolean enable) {
+        this.setValue(enable ? "1" : "0", false);
+    }
+
+    @Override
+    public boolean remoteResponse(boolean enable) {
+        return this.getValue(true) == (enable ? "1" : "0");
+    }
+
+    @Override
+    public boolean localResponse(boolean enable) {
+        return this.getValue(false) == (enable ? "1" : "0");
     }
 }
